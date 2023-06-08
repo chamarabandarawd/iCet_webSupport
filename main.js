@@ -6,7 +6,9 @@ function btnClick(){
     console.log(req.readyState);
     req.send();
     console.log(req.responseText);
- console.log(req.readyState);
- console.log(req.readyState);
- console.log(req.readyState);
+    req.onreadystatechange=function(){
+        if(this.readyState==4){
+            console.log(req.responseText)
+        }
+    }
 }
