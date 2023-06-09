@@ -18,6 +18,8 @@ btn.click(function(){
         }
     ).then((data)=>{
         console.log(data);
+        para.text(data.location.name);
+       temp.text(data.current.temp_c);
     })
 
 });
