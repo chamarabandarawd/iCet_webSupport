@@ -9,9 +9,11 @@ function btnClick(){
     console.log(req.responseText);
     req.onreadystatechange=function(){
         console.log(req.status);
-        if(this.readyState==4){
+        if(this.readyState==4 && req.status==200){
             console.log(req.responseText);
             para.innerText=req.responseText;
+        }else{
+            alert("Error in backend")
         }
     }
   
